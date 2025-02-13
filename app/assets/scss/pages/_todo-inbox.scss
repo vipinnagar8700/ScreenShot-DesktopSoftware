@@ -1,0 +1,271 @@
+.todo-inbox-check {
+    margin-right: 15px;
+    .checkboxs {
+        margin-bottom: 0;
+        padding-left: 25px;
+        display: flex;
+        align-items: center;
+        input ~ .checkmarks {
+            border-color: rgba(145, 158, 171, 0.30);
+            border-radius: 5px;
+            margin-top: 2px;
+            width: 20px;
+            height: 20px;
+        }
+        input {
+            &:checked {
+                ~ .checkmarks{
+                    border-color: $primary;
+                }
+            }
+        }
+    }    
+}
+.todo-wrapper-list-content {
+    margin-left: 5px;
+}
+.notes-header h3 {
+    color: $secondary;
+    font-size: $font-size-18;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+}
+.daterangepicker .ranges li.active  {
+    background-color: $warning !important;
+}
+.todo-inbox-check .checkboxs .checkmarks:after {
+    left: 7px;
+    top: 3px;
+}
+.todo-widget {
+    margin-bottom: 25px;
+}
+.todo-today-content {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .todo-drop-down {
+        span {
+            i {
+                color: $secondary;
+            }
+        }
+    }
+    .todo-today-header {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            svg {
+                width: 16px;
+                height: 16px;
+                color: $text-color;
+            }
+        }
+        h3 {
+            font-size: $font-size-16;
+            font-weight: $font-weight-semibold;
+            color: $secondary;
+            margin-bottom: 0;
+            margin-right: 5px;
+        }
+        h6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background-color: $primary;
+            border-radius: 50px;
+            color: $white;
+            font-size: 10px;
+            font-weight: $font-weight-semibold;
+            margin-bottom: 0;
+        }
+    }
+}
+.todo-wrapper-list {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid  rgba(145, 158, 171, 0.30);
+    background:  $white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include respond-below(custom575) {
+        flex-direction: column;
+    }
+    .todo-inbox-check {
+        display: flex;
+        align-items: center;
+        .todo-wrapper-list-content {
+            h4 {
+                font-size: $font-size-16;
+                font-weight: $font-weight-bold;
+                color: $secondary;
+                margin-bottom: 5px;
+            }
+            p {
+                font-size: 13px;
+                font-weight: $font-weight-medium;
+                color: $text-color;
+                margin-bottom: 0;
+            }
+        }
+        &.todo-inbox-check-list {
+            width: 45%;
+            @include respond-below(custom575) {
+                width: auto;
+            }
+            .checkboxs {
+                margin-bottom: 12px;
+                input ~ .checkmarks {
+                    border-radius: 5px;
+                    margin-top: 0;                    
+                }
+            }    
+        }
+    }   
+    .notes-card-body {
+        width: 35%;
+        @include respond-below(custom575) {
+            width: auto;
+            margin: 20px 0;
+        }
+        p {
+            display: flex;
+            align-items: center;
+            &.high {
+                border-radius: 8px;
+                border: 1px solid $danger;
+                padding: 4px 10px;
+                font-size: $font-size-14;
+                font-weight: $font-weight-semibold;
+                color: $danger;
+                margin-right: 10px;
+            }
+            &.medium {
+                padding: 4px 10px;
+                border-radius: 8px;
+                border: 1px solid #423B93;
+                font-size: $font-size-14;
+                font-family: $font-weight-semibold;
+                color: #423B93;
+            }
+            &.pending {
+                padding: 4px 10px;
+                border-radius: 8px;
+                border: 1px solid #288EC7;
+                font-size: $font-size-14;
+                font-family: $font-weight-semibold;
+                color: #288EC7;
+            }
+            &.low {
+                padding: 4px 10px;
+                border-radius: 8px;
+                border: 1px solid $warning;
+                font-size: $font-size-14;
+                font-family: $font-weight-semibold;
+                color: $warning;                
+            }
+            &.success {
+                padding: 4px 10px;
+                border-radius: 8px;
+                border: 1px solid $success;
+                font-size: $font-size-14;
+                font-family: $font-weight-semibold;
+                color: $success;                
+            }
+            i {
+                &.fa-circle{
+                    font-size: 7px;
+                    margin-right: 4px;
+                }
+            }
+            
+        }
+    }
+    .todo-strike-content {
+        h4 {
+            text-decoration-line: line-through;
+        }
+        p {
+            text-decoration-line: line-through;
+        }
+    }
+    .todo-profile {
+        width: 20%;
+        justify-content: end;
+        img {
+            border-radius: 30px;
+            margin-right: 16px;
+            width: 30px;
+            height: 30px;
+        }
+        a {
+            .fa-ellipsis-v {
+                color: $secondary;
+            }
+        }
+    }
+}
+.todo-calendar  .input-groupicon.calender-input input {
+    padding-left: 10px;
+}
+.todo-calendar {
+    position: relative;
+    .calender-input {
+        position: relative;
+        .info-img {
+            position: absolute;
+            top: 11px;
+            z-index: 100;
+            width: 16px;
+            height: 16px;
+            right: 5px !important;
+            color: $text-color;
+        } 
+    }   
+}
+.todo-accordion {
+    .accordion-item {
+        background: transparent;
+        margin-bottom: 30px;
+        .accordion-header {
+            cursor: pointer;
+            .accordion-button {
+                background: transparent;
+                &.collapsed {
+                    .todo-today-content {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .todo-today-content {
+                width: 100%;
+            }
+            .todo-drop-down {
+                a {
+                    span {
+                        i {
+                            color: $text-color;
+                        }
+                    }
+                }
+            }
+        }
+        .todo-widget {
+            margin-bottom: 0;
+            .todo-wrapper-list {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+               
+            }
+        }
+
+    }
+}

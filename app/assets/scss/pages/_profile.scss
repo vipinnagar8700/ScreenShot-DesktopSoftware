@@ -1,0 +1,123 @@
+.profile-set{
+    margin-bottom: 30px;
+    .profile-head {
+        height: 109px;
+        background: linear-gradient(90deg, $danger-700 0%, $primary 100%);
+        @include rounded(0 10px 0 0);
+        @include respond-below(custom991) {
+            @include rounded(10px);
+        }
+    }
+    .profile-top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: space-between;
+        @include respond-below(custom767) {
+            flex-direction: column;
+        }
+        .profile-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            @include respond-below(custom767) {
+                flex-direction: column;
+            }
+        }
+        .profile-contentimg {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            margin-top: -40px;
+            width: 130px;
+            position: relative;
+            border: 10px solid $white;
+            @include rounded(50%);
+            box-shadow: 0px 4px 4px 0px #00000040;
+            img {
+                @include rounded(50px);
+            }
+        }
+        .profileupload {
+            input[type="file"] {
+                opacity: 0;
+                width: 34px;
+                height: 34px;
+                display: block;
+                z-index: 9;
+                cursor: pointer;
+                @include position(absolute,null,null,10px,42px);
+            }
+            a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                justify-content: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                background: $primary;
+                width: 34px;
+                height: 34px;
+                z-index:1;
+                @include rounded(50px);
+                @include position(absolute,null,null,10px,41px);
+            }
+        }
+        .profile-contentname {
+            padding-left: 20px;
+            @include respond-below(custom767) {
+                text-align: center;
+                @include margin-padding(null, 20px 0 20px 0);
+            }
+            h2 {
+                font-size: $font-size-18;
+                color: $secondary;
+                font-weight: $font-weight-bold;
+            }
+            h4 {
+                color: #777;
+                font-size: $font-size-base;
+            }
+        }
+    }
+}
+.pass-group {
+    position: relative;
+    .toggle-password,
+    .toggle-passworda {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        color: $gray-600;
+        font-size: $font-size-base;
+        @include rounded(50%);
+        @include position(absolute,50%,10px,null,null);
+    }
+}

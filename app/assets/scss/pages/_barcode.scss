@@ -1,0 +1,182 @@
+.barcode-content-list {
+    border-radius: 8px;
+    border: 1px solid rgba(145, 158, 171, 0.30);
+    background:  $white;
+    padding: 24px;
+    @include respond-below(custom575) {
+       padding-left: 15px;
+    }
+    .seacrh-barcode-item {
+        margin-bottom: 24px;
+        .seacrh-barcode-item-one {
+            @include respond-below(custom575) {
+                margin-bottom: 15px;
+             }
+        }
+    }  
+    .search-modal-header {
+        margin-bottom: 24px;
+        .dataTables_wrapper .dataTables_filter {
+                display: none;
+            }
+        .dataTables_length,.dataTables_info,.dataTables_paginate {
+            display: none;
+         }
+         table {
+            thead {
+                th {
+                    padding: 15px 17px !important;
+                }
+            }
+            tbody {
+                td {
+                    padding: 10px 17px;
+                    border-bottom: 1px solid rgba(145, 158, 171, 0.30);
+                }
+            }
+         }
+    }
+    .paper-search-size {
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(145, 158, 171, 0.30);
+        .search-toggle-list {
+            @include respond-below(custom575) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+             }
+            p {
+                margin-bottom: 5px;
+                color: $secondary;
+                font-size: $font-size-14;
+                font-weight: $font-weight-medium;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                @include respond-below(custom575) {
+                    margin-bottom: 0px;
+                 }
+    }
+        }
+    }  
+    .search-barcode-button {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @include respond-below(custom575) {
+            display: block;
+        }
+        a {
+            @include respond-below(custom575) {
+                width: 100%;
+                margin-bottom: 14px;
+            }
+        }       
+    } 
+    .nav-searchinputs {
+        list-style: none;
+    }
+    
+}
+.barcode-delete-icon {
+    margin-right: 8px;
+}
+.close-btn {
+    background: $danger;
+    &:hover {
+        background: $danger-hover;
+    }
+} 
+.seacrh-barcode-item .searchInput{
+    background: $white;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+}  
+.searchInput input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: $font-size-18;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}  
+.searchInput.active input{
+    border-radius: 5px 5px 0 0;
+}  
+.searchInput .resultBox{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+}  
+.searchInput.active .resultBox{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    border: 1px solid $warning;
+}  
+.resultBox li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}  
+.searchInput.active .resultBox li{
+    display: block;
+}
+.resultBox li:hover{
+    background: $warning;
+    color: $white;
+}  
+.searchInput .icon{
+    position: absolute;
+    left: 10px;
+    top: 21px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    line-height: 55px;
+    color: $text-color;
+    cursor: pointer;
+}
+.barcode-scan-header {
+    margin-bottom: 15px;
+    h5 {
+        font-size: $font-size-18;
+        font-weight: $font-weight-bold;
+        color: $secondary;
+    }
+}
+.barcode-scanner-link {
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: 1px solid  rgba(145, 158, 171, 0.30);
+    background:  $white;
+    margin-bottom: 30px;
+    h6 {
+        font-size: $font-size-14;
+        font-weight: $font-weight-bold;
+        color: $secondary;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: $font-size-15;
+        font-weight: $font-weight-normal;
+        color: $text-color;
+        margin-bottom: 5px;
+    }
+  }
+.people-cust-avatar {
+    h6 {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,285 @@
+// Base Font
+$font-size-base: 14px;
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+// Font Family
+$font-family-primary: 'Nunito', sans-serif;
+$font-family-secondary: "Poppins", sans-serif;
+$font-awesome: "Fontawesome";
+	
+// Theme Colors Variables
+$primary: #FF9F43;
+$primary-hover: darken($primary, 10%);
+$secondary: #092C4C;
+$secondary-hover: darken($secondary, 10%);
+$success: #28C76F;
+$success-hover: darken($success, 10%);
+$info: #17a2b8;
+$info-hover: darken($info, 10%);
+$warning: #FF9900;
+$warning-hover: darken($warning, 10%);
+$danger: #FF0000;
+$danger-hover: darken($danger, 10%);
+$dark: #29344a;
+$light: #f8f9fa;
+$white: #ffffff;
+$black: #000000;
+$purple: #7367F0;
+$pink: #ff63a5;
+$blue: #3577f1;
+$teal: #02a8b5;
+$violet: #423B93;
+$cyan: #299cdb;
+$green: #1dd871;
+$orange: #ffa500;
+$indigo: #4d5ddb;
+$yellow: #ffff00;
+
+// Primary
+$primary-100: #FFF5EC;
+$primary-200: #FFECD9;
+$primary-300: #FFE2C7;
+$primary-400: #FFD9B4;
+$primary-500: #FFCFA1;
+$primary-600: #FFC58E;
+$primary-700: #FFBC7B;
+$primary-800: #FFB269;
+$primary-900: #FFA956;
+
+// Secondary
+$secondary-100: #E6EAED;
+$secondary-200: #CED5DB;
+$secondary-300: #B5C0C9;
+$secondary-400: #9DABB7;
+$secondary-500: #8496A6;
+$secondary-600: #6B8094;
+$secondary-700: #536B82;
+$secondary-800: #3A5670;
+$secondary-900: #22415E;
+
+// Success
+$success-100: #EAF9F1;
+$success-200: #D4F4E2;
+$success-300: #BFEED4;
+$success-400: #A9E9C5;
+$success-500: #94E3B7;
+$success-600: #7EDDA9;
+$success-700: #69D89A;
+$success-800: #53D28C;
+$success-900: #3ECD7D;
+
+// Warning
+$warning-100: #FFF5E6;
+$warning-200: #FFEBCC;
+$warning-300: #FFE0B3;
+$warning-400: #FFD699;
+$warning-500: #FFCC80;
+$warning-600: #FFC266;
+$warning-700: #FFB84D;
+$warning-800: #FFAD33;
+$warning-900: #FFA31A;
+
+// Danger
+$danger-100: #FFE6E6;
+$danger-200: #FFCCCC;
+$danger-300: #FFB3B3;
+$danger-400: #FF9999;
+$danger-500: #FF8080;
+$danger-600: #FF6666;
+$danger-700: #FF4D4D;
+$danger-800: #FF3333;
+$danger-900: #FF1A1A;
+
+// Purple
+$purple-100: #F8F8FA;
+$purple-200: #E3E1FC;
+$purple-300: #D5D1FB;
+$purple-400: #C7C2F9;
+$purple-500: #B9B3F8;
+$purple-600: #ABA4F6;
+$purple-700: #9D95F5;
+$purple-800: #8F85F3;
+$purple-900: #8176F2;
+
+// White
+$white-1: rgba(0,0,0,0.1);
+$white-2: rgba(0,0,0,0.2);
+$white-3: rgba(0,0,0,0.3);
+$white-4: rgba(0,0,0,0.4);
+$white-5: rgba(0,0,0,0.5);
+$white-6: rgba(0,0,0,0.6);
+$white-7: rgba(0,0,0,0.7);
+$white-8: rgba(0,0,0,0.8);
+$white-9: rgba(0,0,0,0.9);
+
+// Gray
+$gray-100: #f3f6f9;
+$gray-200: #eff2f7;
+$gray-300: #e8ebed;
+$gray-400: #dbe0e6;
+$gray-500: #adb5bd;
+$gray-600: #67748E;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "dark": $dark,
+    "light": $light,
+    "black": $black,
+    "purple": $purple,
+    "yellow": $yellow,
+    "teal": $teal
+);
+
+$text-color: #5B6670;
+$title-color: #1B2850;
+$sub-title: #B8BCC9;
+$body-bg: #FAFBFE;
+$wrapper-bg: #f1f5f6;
+$text-muted: #9595b5;
+$default-background: #f7f8f9;
+$black-bg: #141432;
+$card-dark-bg: #1d1d42;
+$navy: #353570;
+$theme-title: #97A2D2;
+$input-bg: #2c2c50;
+$form-control-bg: #ffffff;
+
+// Social Icons Colors
+$facebook: #3B5998;
+$twitter: #00ACEE;
+$google: #DD4B39;
+$telegram: #0088CC;
+$linkedin: #0E76A8;
+$youtube: #C4302B;
+$instagram: #3F729B;
+$reddit: #C6C6C6;
+$pinterest: #cc2127;
+$vk: #2B587A;
+$rss: #EE802F;
+$skype: #00AFF0;
+$xing: #126567;
+$tumblr: #34526F;
+$email: #6567A5;
+$delicious: #205CC0;
+$stumbleupon: #F74425;
+$digg: #191919;
+$blogger: #FC4F08;
+$flickr: #FF0084;
+$vimeo: #86C9EF;
+$yahoo: #720E9E;
+$gplus: #DD4B39;
+$appstore: #000;
+
+// Gradient Variables
+$primary-gradient: linear-gradient(to right, $primary 0%, #8e77fa 100%);
+$secondary-gradient: linear-gradient(to right, $secondary 0%, #28b7f9 100%);
+$success-gradient: linear-gradient(to right,$success 0%, #5cf9e2 100%);
+$warning-gradient: linear-gradient(to right, $warning 0%, #fbc434 100%);
+$danger-gradient: linear-gradient(to right,$danger 0%, #fd4a68  100%);
+$info-gradient: linear-gradient(to right, $info 0%, #00f2fe  100%);
+$pink-gradient: linear-gradient(to right, $pink 0%, #FFA795 100%);
+$teal-gradient: linear-gradient(to right, $teal 0%, #0695DD 100%);
+$orange-gradient: linear-gradient(to right,$orange 0%,#FBB034 100%);
+$purple-gradient: linear-gradient(to right, $purple 0%, #9b25b7 100%);
+$light-gradient: linear-gradient(to right, $light 0%, #D1D6DE 100%);
+$dark-gradient: linear-gradient(to right, $dark 0%, #54505D 100%);
+
+// Style Anchor Elements
+$link-color: $primary;
+$link-decoration: none;
+$link-shade-percentage: 20%;
+$link-hover-color: darken($link-color, 10%);
+$link-hover-decoration: null;
+$spacer: 1rem;
+
+// Border
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-400;
+$default-border: $gray-400;
+$input-border: #e9edf6;
+
+// Border Radius
+$border-radius: 4px;
+$border-radius-sm: 3px;
+$border-radius-lg: 5px;
+$border-radius-xl: 8px;
+$border-radius-xxl: 12px;
+$rounded: 50%;
+$rounded-pill: 1.5rem;
+
+// Box Shadow
+$box-shadow: 0px 4px 60px 0px rgba(231, 231, 231, 0.47);
+$box-shadow-sm: 0px 4px 60px 0px rgba(190, 190, 190, 0.27);
+$box-shadow-lg: 0 5px 10px rgba(30, 32, 37, 0.12);
+
+// Font Size
+$font-size-8: 8px;
+$font-size-9: 9px;
+$font-size-10: 10px;
+$font-size-11: 11px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-26: 26px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-32: 32px;
+$font-size-34: 34px;
+$font-size-36: 36px;
+$font-size-40: 40px;
+$font-size-42: 42px;
+$font-size-50: 50px;
+$font-size-54: 54px;
+$font-size-60: 60px;
+
+$h1-fs: 2rem;
+$h2-fs: 1.75rem;
+$h3-fs: 1.5rem;
+$h4-fs: 1.25rem;
+$h5-fs: 1.15rem;
+$h6-fs: 1rem;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;

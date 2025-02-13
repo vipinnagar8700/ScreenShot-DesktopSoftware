@@ -1,0 +1,76 @@
+.inbox-menu {
+    display: inline-block;
+    
+    width: 100%;
+    @include margin-padding(0 0 20px,0 );
+    li {
+        display: inline-block;
+        width: 100%;
+        a {
+            color: #333;
+            display: inline-block;
+            padding: 10px 15px;
+            width: 100%;
+            font-weight: $font-weight-semibold;
+            text-transform: capitalize;
+            -webkit-transition: 0.3s ease;
+            -moz-transition: 0.3s ease;
+            transition: 0.3s ease;
+            &:hover{
+                background: rgba(33, 33, 33, 0.05);
+            }
+            i {
+                font-size: $font-size-16;
+                padding-right: 10px;
+                color: #878787;
+            }
+        }
+    }
+}
+.compose-btn {
+    margin-bottom: 25px;
+}
+.top-action-left{
+    .btn-group {
+        margin-bottom: 5px;
+    }
+    .dropdown-toggle{
+        height: 40px;
+        &::after{
+            display: none;
+        }
+    }
+}
+.table-inbox {
+    .starred.fas.fa-star {
+        color: $warning;
+    }
+    .checked {
+        background-color: $gray-300;
+    }
+    tbody{
+        tr{
+            td{
+                font-size: $font-size-14;
+                color: $secondary;
+            }
+        }
+    }
+}
+.unread{
+    .name,
+    .subject,
+    .mail-date{
+        color: $black;
+        font-weight: $font-weight-bold;
+    }
+}
+.email-header{
+    .btn-white{
+        min-width: auto;
+        height: 38px;
+        i{
+            margin-left:5px;
+        }
+    }
+}

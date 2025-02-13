@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="POS - Bootstrap Admin Template">
+    <meta name="keywords"
+        content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Login - DipanshuTech</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="account-page">
+
+    <div id="global-loader">
+        <div class="whirly-loader"> </div>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <div class="account-content">
+            <div class="login-wrapper bg-img">
+                <div class="login-content">
+                    <form action="index.html">
+                        <div class="login-userset">
+                            <div class="login-logo logo-normal">
+                                <img src="assets/img/logo.png" alt="img">
+                            </div>
+                            <a href="index.html" class="login-logo logo-white">
+                                <img src="assets/img/logo-white.png" alt="">
+                            </a>
+                            <div class="login-userheading">
+                                <h3>Sign In</h3>
+                                <h4>Access the DipanshuTech panel using your email and passcode.</h4>
+                            </div>
+                            <div class="form-login mb-3">
+                                <label class="form-label">Email Address</label>
+                                <div class="form-addons">
+                                    <input type="text" class="form-control" id="emailInput">
+                                    <img src="assets/img/icons/mail.svg" alt="img">
+                                </div>
+                            </div>
+                            <div class="form-login mb-3">
+                                <label class="form-label">Password</label>
+                                <div class="pass-group">
+                                    <input type="password" class="pass-input form-control" id="passwordInput">
+                                    <span class="fas toggle-password fa-eye-slash"></span>
+                                </div>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="rememberMeCheckbox">
+                                <label class="form-check-label" for="rememberMeCheckbox">
+                                    Remember Me
+                                </label>
+                            </div>
+                            <div class="form-login">
+                                <button type="submit" class="btn btn-login">Sign In</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Main Wrapper -->
+    <div class="customizer-links" id="setdata">
+        <ul class="sticky-sidebar">
+            <li class="sidebar-icons">
+                <a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-original-title="Theme">
+                    <i data-feather="settings" class="feather-five"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Feather Icon JS -->
+    <script src="assets/js/feather.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/theme-script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector("form");
+            const emailInput = document.getElementById("emailInput");
+            const passwordInput = document.getElementById("passwordInput");
+            const rememberMeCheckbox = document.getElementById("rememberMeCheckbox");
+            const loginButton = document.querySelector(".btn-login");
+
+            // Prefill email and password if "Remember Me" is checked
+            const savedEmail = localStorage.getItem("savedEmail");
+            const savedPassword = localStorage.getItem("savedPassword");
+            if (savedEmail && savedPassword) {
+                emailInput.value = savedEmail;
+                passwordInput.value = savedPassword;
+                rememberMeCheckbox.checked = true;
+            }
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+
+                if (!email || !password) {
+                    alert("Please fill in both email and password.");
+                    return;
+                }
+
+                // Remember Me functionality
+                if (rememberMeCheckbox.checked) {
+                    localStorage.setItem("savedEmail", email);
+                    localStorage.setItem("savedPassword", password);
+                } else {
+                    localStorage.removeItem("savedEmail");
+                    localStorage.removeItem("savedPassword");
+                }
+
+                loginButton.disabled = true;
+                loginButton.textContent = "Signing In...";
+
+                // Simulating login request
+                window.electronAPI.login({ email, password });
+
+                // Listen for login success
+                window.electronAPI.onLoginSuccess((_, user) => {
+                    console.log("Login successful:", user);
+
+                    // Store user details locally (optional)
+                    localStorage.setItem("authUser", JSON.stringify(user));
+
+                    alert("Welcome, " + user.name + "!");
+                    loginButton.disabled = false;
+                    loginButton.textContent = "Sign In";
+                });
+
+                // Listen for login failure
+                window.electronAPI.onLoginFailed((_, errorMessage) => {
+                    alert(errorMessage || "Login failed. Please try again.");
+                    loginButton.disabled = false;
+                    loginButton.textContent = "Sign In";
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

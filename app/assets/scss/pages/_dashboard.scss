@@ -1,0 +1,177 @@
+.dash-widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    background: $white;
+    margin-bottom: 25px;
+    @include rounded(6px);
+    @include margin-padding(null, 20px);
+    border: 1px solid $gray-400;
+    &.dash1{
+        .dash-widgetimg{
+           span{
+                background: rgba(40, 199, 111, 0.12);
+           }
+        }
+    }
+    &.dash2{
+        .dash-widgetimg{
+           span{
+             background: rgba(0, 207, 232, 0.12);
+           }
+        }
+    }
+    &.dash3{
+        .dash-widgetimg{
+           span{
+                background: rgba(234, 84, 85, 0.12);
+           }
+        }
+    }
+    .dash-widgetcontent {
+        margin-left: 20px;
+        h5 {
+            color: $secondary;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-18;
+            margin-bottom: 5px;
+        }
+        h6 {
+            font-weight: $font-weight-normal;
+            font-size: $font-size-base;
+            color: $gray-600;
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    .dash-widgetimg {
+        span {
+            width: 48px;
+            height: 48px;
+            background: rgba(249, 110, 111, 0.12);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            @include rounded(50px);
+        }
+    }
+}
+.dash-count {
+    background: $primary;
+    color: $white;
+    min-height:98px;
+    width: 100%;
+    @include rounded(6px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    @include margin-padding(0 0 25px, 20px);
+    &.das1{
+        background: #00CFE8;
+    }
+    &.das2{
+        background: $title-color;
+        
+    }
+    &.das3{
+        background: $success;
+    }
+    h4 {
+        color: $white;
+        font-size: $font-size-24;
+        font-weight: $font-weight-bold;
+        margin-bottom: 5px;
+    }
+    h5 {
+        color: $white;
+        font-size: $font-size-14;
+    }
+    .dash-imgs{
+		display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        @include transition(all 0.5s ease);
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        i{
+            font-size: $font-size-36;
+            color: $white;
+        }
+        svg{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &:hover{
+        .dash-imgs{
+            @include transform(scale(1.25));
+        }
+    }
+}
+.btn-white{
+    &.dropdown-toggle{
+        &:after{
+            display: none;
+        }
+    }
+}
+.graph-sets{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    >ul{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        @include respond-below(custom991) {
+            display: none;
+        }
+        li{
+            margin-right: 35px;
+            span{
+                color: $gray-600;
+                font-weight: $font-weight-normal;
+                position: relative;
+                &:after{
+                    content:"";
+                    width:12px;
+                    height: 12px;
+                    background-color: $success;
+                    @include rounded(50px);
+                    @include position(absolute,3px,null,null,-20px);
+                }
+            }
+            &:last-child{
+                span{
+                    &:after{
+                        background-color: $danger-700;
+                    }
+                }
+            }
+        }
+    }
+
+}

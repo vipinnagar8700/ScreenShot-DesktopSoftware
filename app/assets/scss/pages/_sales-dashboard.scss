@@ -1,0 +1,257 @@
+.text-success {
+    color: $success !important;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background: $primary;
+}
+.font-14 {
+    font-size: $font-size-base;
+}
+.text-blue {
+    color: $blue;
+}
+.welcome {
+    @include margin-padding(0 0 24px 0, 15px 10px);
+    background: $white;
+    @include rounded(8px);
+    box-shadow: $box-shadow;
+    color:  $title-color;
+    .welcome-text {
+        @include respond-below(custom1199) {
+            flex-wrap: wrap;
+        }
+        @include respond-below(custom991) {
+            margin-bottom: 15px;
+        }
+        @include respond-below(custom767) {
+            flex-wrap: wrap;
+        }
+        h3 {
+            font-weight: $font-weight-bold;
+            @include respond-below(custom767) {
+                margin-bottom: 10px;
+            }
+        }
+        h6 {
+            font-weight: $font-weight-semibold;
+            font-size: $font-size-16;
+            color: $text-color;
+        }
+    }
+    input {
+        min-width: 240px;
+    }
+    .daterange-wraper {
+        svg {
+            @include position(absolute,50%,null,null,20px);
+            @include transform(translateY(-50%));
+        }
+        input {
+            @include margin-padding(0 0 0 10px, 5px 10px 5px 27px);
+            @include respond-below(custom767) {
+                margin-left: 0;
+                padding-left: 37px;
+            }
+        }   
+        &:hover {
+            svg {
+                color:  $white;
+            }
+        }
+    }
+    a, input, button {
+        @include rounded(8px);
+        border: 1px solid $gray-100;
+        display: inline-block;
+        @include margin-padding(0 0 0 10px, 5px 10px);
+        color: $secondary;
+        height: 38px;
+        @include transition(all 0.5s ease);
+        &:hover {
+            border-color: $primary;
+            background:  $primary;
+            color: $white;
+            svg {
+                color:  $white;
+            }
+        }
+        #collapse-header {
+            @include transition(all 0.5s ease);
+            svg {
+                @include transition(all 0.5s ease);
+            }
+            @include respond-below(custom991) {
+                display: none;
+            }
+        }
+    }
+    
+}
+.sales-cards {
+    .card {
+        @include margin-padding(null, 20px);
+        @include rounded(8px);
+        flex-direction:  initial;
+        h6{
+            color: $primary;
+            font-size: $font-size-16;
+            font-weight: $font-weight-semibold;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: $secondary;
+            font-weight: $font-weight-bold;
+            margin-bottom: 8px;
+        }
+        p {
+            color:  $text-color;
+        }
+        &.color-info {
+            display: block;
+            position: relative;
+            color:  $white;
+            border: none;
+            svg {
+                @include position(absolute,15px,15px,null,null);
+                cursor: pointer;
+            }
+            h3 {
+                margin-bottom: 0; 
+            }
+            h3, p {
+                color:  $white;
+            }
+            p {
+                font-size: $font-size-15;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.table {
+    tbody{
+        tr{
+            td {
+                .product-info {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    .product-img {
+                        display: -webkit-inline-box;
+                        display: -ms-inline-flexbox;
+                        display: inline-flex;
+                        align-items: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        justify-content: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        margin: 0 8px 0 0;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+                &.productimgname {
+                    .product-img {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.dashboard-recent-products {
+        tr {
+            td {
+                padding: 10px;
+            }
+            &:last-child {
+                td {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    &.table-borderless {
+        tr {
+            td {
+                font-size: $font-size-15;
+                border-bottom: none;
+                .head-text {
+                    color:  $secondary;
+                }
+                .dull-text {
+                    color:  $text-color;
+                }
+            }
+        }
+    }
+    &.best-seller {
+        tr {
+            td {
+                padding-bottom: 17px;
+            }
+            &:last-child {
+                td {
+                }
+            }
+        }
+    }
+    &.recent-transactions {
+         thead {
+            border-bottom: none;
+        }
+        tr {
+            td {
+                padding: 15px;
+                span {
+                    font-size: $font-size-base;
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-wraper {
+    .btn-white {
+        min-width: auto;
+        svg {
+            margin-right: 4px;
+        }
+        &:hover, &:active, &.show {
+            background: $primary;
+            border-color: $primary;
+            color: $white;
+        }
+    }
+}
+#sales_db_world_map {
+    .jvectormap-zoomin, .jvectormap-zoomout {
+        display: none;
+    }
+    .jvectormap-tip {
+        background: $white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border:  none;
+        text-align: center;
+    }
+}
+.sales-range{
+    .text-success {
+        font-weight: $font-weight-bold;
+    }
+}
+
+

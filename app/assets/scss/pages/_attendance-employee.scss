@@ -1,0 +1,201 @@
+.attendance-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    @include respond-below(custom575){
+        display: block;
+    }
+    .attendance-content{
+        display:flex;
+        align-items: center;
+        h3{
+            font-size: $font-size-20;
+            flex-shrink: 0;
+            margin-left: 10px;
+            span{
+                color: $text-color;
+            }
+        }
+    }
+}
+.table-top-head {
+    &.employe{
+        @include respond-below(custom575){
+            justify-content: flex-start;
+                margin-top: 24px;
+        }
+    }
+}
+.attendance-widget{
+    .card{
+        .card-body{
+            h5{
+                display: flex;
+                justify-content: space-between;
+                font-size: $font-size-20;
+                align-items: center;             
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(145, 158, 171, 0.30);
+                margin-bottom: 24px;
+             span{
+                font-size: 13px;
+                color: $purple;
+             }
+            }
+            .card{
+                &.attendance{
+                    display: flex;
+                    padding: 30px 10px;
+                    align-items: center;
+                    background-color: $body-bg;
+                    flex-direction: row;
+                    margin-bottom: 24px;
+                    img{
+                        width: 48px;
+                        height: 48px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal-attendance-btn{
+    display: flex;
+    gap: 10px;
+}
+.warming-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+    color: $primary;
+    font-size: $font-size-20;
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 159, 67, 0.09);
+    padding: 20px;
+    margin-bottom: 14px;
+    }
+    h6{
+        font-size: $font-size-16;
+    }
+}
+.danger-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+    color: $danger;
+    font-size: $font-size-20;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background: rgba(255, 0, 0, 0.09);
+    padding: 20px;
+    margin-bottom: 14px;
+    }
+    h6{
+        font-size: $font-size-16;
+    }
+}
+.light-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+    color: $purple;
+    font-size: $font-size-20;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background:rgba(115, 103, 240, 0.09);
+    padding: 20px;
+    margin-bottom: 14px;
+    }
+    h6{
+        font-size: $font-size-16;
+    }
+}
+.success-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+    color: $purple;
+    font-size: $font-size-20;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background:rgba(115, 103, 240, 0.09);
+    padding: 20px;
+    margin-bottom: 14px;
+    }
+    h6{
+        font-size: $font-size-16;
+    }
+}
+.widget-attend{
+    display: flex;
+    @include respond-below(custom991) {
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+}
+.box-attend{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+.progress-bar-success{
+    background-color:$success ;
+}
+.progress-bar-warning{
+    background-color: $warning;
+}
+.progress-bar-danger{
+    background-color: $danger;
+}
+.progress.attendance{
+    width: 127px;
+    height: 7px;
+}
+.badges-inactive.Holiday{
+    color: $purple;
+    border: 1px solid $purple;
+}
+.modal-deletecontent{
+    padding: 24px;
+    .feather-xcircircle{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+         color: $danger;
+         margin: auto;
+    }
+    h4{
+        padding: 20px 0 5px 0;
+        text-align: center;
+        color: $secondary;
+        font-size: $font-size-20;
+         font-weight: $font-weight-bold;
+    }
+    p{
+        text-align: center;
+        color: $text-color;
+        font-size: $font-size-15;
+        font-weight: $font-weight-normal;
+    }
+    .modal-footer-btn{
+        &.delete{
+            text-align: center;
+        }
+    }
+}

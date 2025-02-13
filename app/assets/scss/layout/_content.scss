@@ -1,0 +1,292 @@
+.page-wrapper {
+    @include transition(all 0.5s ease);
+    @include margin-padding( 0 0 0 260px, 66px 0 0);
+    @include position(relative,null,null,null,0);
+    @include transition(all 0.2s ease);
+    @include respond-below(custom991) {
+        @include margin-padding( 0 , 60px 0 0);
+    }
+    .content {
+        @include margin-padding(null, 24px);
+        padding-bottom: 0;
+        @include respond-below(custom991) {
+            @include margin-padding(null, 15px);
+        }
+        .add-item.new-sale-items {
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            width: 100%;
+        }
+    }
+    
+}
+.page-wrapper.details-blk {
+    padding: 0;
+    margin: 0;
+}
+.page-wrapper-new {
+    background: $white;
+    padding: 24px;
+    border-radius: 8px;
+    .card {
+        border: none;
+        .card-body {
+            border-top: 1px solid $gray-100;
+        }
+    }
+    .page-header {
+        margin-bottom: 40px;
+        h4 {
+            font-size: $font-size-20;
+        }
+        .page-btn {
+            .btn-added {
+                padding: 8px 8px;
+            }
+        }
+    } 
+}
+.sidebarrightmenu{
+    .page-wrapper {
+        @include margin-padding(0 0 0 350px, null);
+        @include respond-below(custom991) {
+            @include margin-padding(0, null);
+        }
+    }
+}
+.card{
+    .card-header{
+        .dropset {
+            color: $gray-600;
+            @include margin-padding(null, 0 10px);
+        }
+    }
+    .card-body{
+        .loss-data {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            .input-groupicon {
+                margin-right: 10px;
+            }
+            @include respond-below(custom575) {
+                display: block;
+            }
+        }
+        .input-blocks {
+            label {
+                span {
+                    color: $danger;
+                }
+            }
+        }
+        .text-title {
+            margin-bottom: 20px;
+            p {
+                font-size: $font-size-16;
+                font-weight: $font-weight-semibold;
+                color: $secondary;
+            }
+        }
+        .payroll-info {
+            border-bottom: 1px solid $gray-100;
+            .status-updates {
+                margin-left: 25%;
+            }
+            .status-updates {
+                .form-check-input:checked {
+                    background-color: $primary;
+                    border-color: $primary;
+                }
+                .form-check-input:focus {
+                    box-shadow: none;
+                    border-color: $gray-100;
+                }
+            }
+        }
+        .payroll-title {
+            margin: 20px 0 20px 0;
+            p {
+                font-size: $font-size-16;
+                font-weight: $font-weight-semibold;
+                color: $secondary;
+            }
+        }
+        .sub-form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $gray-100;
+            .subadd-btn {
+                .btn-add {
+                    border-radius: 8px;
+                    border: 1px solid var(--Stroke, rgba(145, 158, 171, 0.30));
+                    background: $secondary;
+                    color: $white;
+                    padding: 7px 9px;
+                    margin-left: 20px;
+                    margin-bottom: -11px;
+                }
+            }
+        }
+        .view-btn {
+            text-align: end;
+        }
+        .summary-blk {
+            margin-bottom: 15px;
+            p {
+                font-size: $font-size-14;
+                font-weight: $font-weight-semibold;
+                color: $secondary;
+            }
+        }
+        .details {
+            td {
+                .view-product {
+                    border-radius: 6px;
+                    background: #F8F8F8;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+                a {
+                    border-radius: 8px;
+                    border: 1px solid var(--Stroke, rgba(145, 158, 171, 0.30));
+                    .feather-trash-2 {
+                        width: 14px;
+                        height: 14px;
+                        color: $danger;
+                    }
+                }
+            }
+        }
+        .payslip-month {
+            justify-content: space-between;
+            align-items: center;
+            .month-of-slip {
+                h4 {
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+        .emp-details {
+            justify-content: space-between;
+             align-items: center;
+             background: #FAFBFE;
+             padding: 10px;
+            .emp-name-id {
+                h6 {
+                    font-size: $font-size-15;
+                    font-weight: $font-weight-semibold;
+                    span {
+                        font-size: $font-size-15;
+                        font-weight: $font-weight-normal;
+                        color: $text-color;
+                    }
+                }
+            }
+            .emp-location-info {
+                h6 {
+                    font-size: $font-size-15;
+                    font-weight: $font-weight-semibold;
+                    span {
+                        font-size: $font-size-15;
+                        font-weight: $font-weight-normal;
+                        color: $text-color;
+                    }
+                }
+            }
+           
+        }
+    }
+}
+.btn-white {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    background-color: $white;
+    border: 1px solid rgba(145, 158, 171, 0.32);
+    color: $secondary;
+    @include margin-padding(null, 3px 10px);
+    @include rounded(5px);
+    min-width: 90px;
+    &:hover {
+        border: 1px solid rgba(145, 158, 171, 0.32);
+    }
+}
+.mail-search {
+    .form-control {
+        height: 40px;
+    }
+}
+.inputcheck {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    color: $black;;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-base;
+    input {
+        @include position(absolute,null,null,null,null);
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked {
+            & ~ .checkmark:after {
+                display: block;
+            }
+        }
+      }
+      .checkmark {
+        @include position(absolute,0,null,null,0);
+        height: 20px;
+        width: 20px;
+        border:1px solid $gray-300;
+        background: $light;
+        @include rounded(5px);
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        &:after {
+            @include position(absolute,3px,null,null,6px);
+            width: 5px;
+            height: 10px;
+            border: solid $primary;
+            border-width: 0 2px 2px 0;
+            @include transform(rotate(45deg));
+        }
+      }
+     
+    input {
+        &:checked ~ .checkmark {
+            border:1px solid $primary;
+        }
+     }
+}
+.animation-tada{
+    animation: tada 1.5s ease infinite;
+}
+.quantity-btn{
+    svg{
+        stroke: 1px;
+        width: 16px;
+        height: 16px;
+    }
+}

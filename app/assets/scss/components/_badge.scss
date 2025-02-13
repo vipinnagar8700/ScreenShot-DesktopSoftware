@@ -1,0 +1,54 @@
+.badge {
+    &.badge-primary {
+        background: rgba($primary, 0.1);
+        box-shadow: 0 1px 1px rgba($primary, 0.5);
+        color: $primary;
+        
+    }
+}
+@each $color, $value in $theme-colors {
+    .badge {
+        &.badge-#{$color} {
+            background: #{$value};
+            box-shadow: 0 1px 1px rgba($value, 0.5);
+            color: $white;
+        }
+        &.badge-soft-#{$color} {
+            background: rgba($value, 0.1);
+            box-shadow: 0 1px 1px rgba($value, 0.5);
+            color: $value;
+        }
+    }
+}
+.badge{
+    padding: .25rem .45rem;
+    text-transform:capitalize;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.5px;
+    border-radius: $border-radius;
+    &.badge-xs {
+        font-size: 10px;
+        padding: 0px 5px;
+        line-height: 18px;
+    }
+    &.badge-sm {
+        font-size: 11px;
+        padding: 5px 8px;
+        line-height: 11px;
+    }
+    &.badge-md {
+        font-size: 12px;
+        padding: 5px 12px;
+        line-height: 1.5;
+    }
+    &.badge-lg {
+        font-size: $font-size-14;
+        padding: 0px 10px;
+        line-height: 30px;
+    }
+    &.badge-xl {
+        font-size: $font-size-16;
+        padding: 0px 15px;
+        line-height: 35px;
+    }
+}

@@ -1,0 +1,215 @@
+.error-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.comming-soon-pg {
+    background-image: url(../img/coming-soon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    @include respond-below(custom991) {
+        height: 100%;
+    }
+    .coming-soon-box {
+        width: 800px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        padding: 40px;
+        text-align: center;
+        @include respond-below(custom1199) {
+            padding: 20px 40px;
+            max-width: 800px;
+        }
+        @include respond-below(custom991) {
+            width: auto;
+            padding: 30px;
+            margin: 20px;
+        }
+        @include respond-below(custom575) {
+            padding: 15px;
+            margin: 10px;
+        }
+        .pos-logo {
+            margin-bottom: 30px;
+            @include respond-below(custom1199) {
+                margin-bottom: 20px;
+            }
+        }
+        span {
+            font-size: $font-size-24;
+            color: $gray-600;
+            font-weight: $font-weight-bold;
+        }
+        h1 {
+            font-size: $font-size-60;
+            font-weight: $font-weight-bold;
+            line-height: normal;
+            @include respond-below(custom1199) {
+                font-size: $font-size-50;
+            }
+            @include respond-below(custom991) {
+                font-size: $font-size-40;
+            }
+            @include respond-below(custom575) {
+                font-size: $font-size-28;
+            }
+            span {
+                font-size: $font-size-60;
+                color: $primary;
+                @include respond-below(custom1199) {
+                    font-size: $font-size-50;
+                }
+                @include respond-below(custom991) {
+                    font-size: $font-size-40;
+                }
+                @include respond-below(custom575) {
+                    font-size: $font-size-28;
+                }
+            }
+        }
+        p {
+            font-size: $font-size-15;
+            max-width: 400px;
+            text-align: center; 
+            margin: auto;
+        }
+        .coming-soon-timer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            margin: 30px 0;
+            @include respond-below(custom1199) {
+                margin: 20px 0;
+            }
+            li {
+                border: 1px solid $gray-200;
+                background-color: $white;
+                font-size: $font-size-16;
+                width: 85px;
+                height: 85px;
+                border-radius: 8px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                justify-content: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                font-size: $font-size-16;
+                font-weight: $font-weight-medium;
+                flex-direction: column;
+                margin-right: 14px;
+                color: $gray-600;
+                @include respond-below(custom575) {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 5px;
+                }
+                span {
+                    color: $secondary;
+                    font-size: $font-size-32;
+                    line-height: normal;
+                    @include respond-below(custom575) {
+                        font-size: $font-size-20;
+                    }
+                }
+                &.seperate-dot {
+                    color: $secondary;
+                    width: auto;
+                    height: auto;
+                    border: 0;
+                    border-radius: 0;
+                    background-color: transparent;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        .subscribe-form {
+            position: relative;
+            .subscribe-btn {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+            input {
+                height: 58px;
+                padding-right: 130px;
+            }
+            label {
+                color: $secondary;
+                font-weight: $font-weight-semibold;
+            }
+        }
+        .social-media-icons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            margin-top: 30px;
+            @include respond-below(custom1199) {
+                margin-top: 20px;
+            }
+            li {
+                margin-right: 5px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    justify-content: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    width: 32px;
+                    height: 32px;
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    &:hover {
+                        background-color: $primary;
+                    }
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,477 @@
+.employee-grid-profile {
+    text-align: center;
+    background: $white;
+    border-radius: 8px;
+    @include margin-padding(0 0 24px,15px);
+    box-shadow: 0px 4px 60px 0px rgba(190, 190, 190, 0.27);
+    border: 1px solid $gray-400;
+    .profile-head {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: space-between;
+        margin-bottom: 24px;
+        .profile-head-action {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            .badge badge-linedanger {
+                background: $white;
+                border: 1px solid $danger;
+                padding: 2px 10px;
+            }
+        }
+        .dep-name {
+            h5 {
+                font-size: $font-size-18;
+                font-weight: $font-weight-bold;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                &::before {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                }
+                &.active {
+                    &::before {
+                        background: $success;
+                    }
+                }
+                &.inactive {
+                    &::before {
+                        background: $danger;
+                    }
+                }
+            }
+        }
+    }
+    .profile-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            position: relative;
+            img {
+                border-radius: 8px;
+            }
+            &.active-profile {
+                &::after {
+                    content: "";
+                    background: $success;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -3px;
+                    bottom: -3px;
+                    padding: 3px;
+                    border: 3px solid $white;
+                }
+            }
+        }
+        &.department-profile-info {
+            background-color: $gray-100;
+            padding: 15px;
+            border-radius: 10px;
+            .profile-pic {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 8px;
+            }
+            h4 {
+                font-size: $font-size-15;
+            }
+        }
+        h5 {
+            color: $primary;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-size: $font-size-18;
+            font-weight: $font-weight-bold;
+        }
+        span {
+            font-size: $font-size-15;
+        }
+    }
+    ul {
+        &.department {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: space-between;
+            text-align: left;
+            background-color: $gray-100;
+            @include margin-padding(null,15px);
+            border-radius: 8px;
+            li {
+                color: $secondary;
+                font-weight: $font-weight-medium;
+                font-size: $font-size-15;
+                span {
+                    display: block;
+                    color: $text-color;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .dropdown.profile-action {
+        svg {
+            color: $secondary;
+        }
+        .dropdown-menu {
+            padding: 0;
+            right: 0px !important;
+            margin-top: 10px !important;
+            left: unset !important;
+            min-width: 130px;
+        }
+        .dropdown-menu a.dropdown-item + a {
+            margin-top: 0;
+        }
+        ul {
+            li {
+                a {
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 8px;
+                    }
+                    &:hover {
+                        svg {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hide-head {
+    .header {
+        display: none;
+    }
+    .sidebar {
+        top: 0;
+    }
+    .page-wrapper {
+        padding-top: 0;
+    }
+    .full-height {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+.card-title-head {
+    h6 {
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-16;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        @include margin-padding(0 0 20px,0 0 20px);
+        border-bottom: 1px solid rgba(145, 158, 171, 0.30);
+        svg {
+            width: 20px;
+            margin-right: 5px;
+            color: $primary;
+        }
+    }
+}
+.new-employee-field {
+    .image-upload {
+        width: 120px;
+        height: 38px;
+        border: 0;
+        background-color: $primary;
+        input[type=file] {
+            height: 38px;
+        }
+        .image-uploads {
+            top: 8px;
+            padding: 0;
+            h4 {
+                color: $white;
+                font-size: $font-size-15;
+                line-height: normal;
+            }
+        }
+    }
+}
+.profile-pic-upload {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    margin-bottom: 24px;
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border: 1px dashed $text-color;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        border-radius: 10px;
+        margin-right: 24px;
+        position: relative;
+        flex-shrink: 0;
+        span {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            flex-direction: column;
+            svg {
+                margin-right: 0;
+            }
+        }
+        .close-img {
+            .info-img {
+                width: 12px;
+                height: 12px;
+                color: $white;
+                border-radius: 3px;
+                background: $danger;
+            }
+            padding: 2px;
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            
+        }
+    }
+    &.edit-pic {
+        .profile-pic {
+            border: 0;
+            img {
+                border-radius: 10px;
+            }
+            .user-editer {
+                border-radius: 0;
+            }
+        }
+    }
+}
+.pass-info {
+    .input-blocks {
+        svg {
+            position: absolute;
+            right: 10px;
+            top: 36px;
+            width: 15px;
+            left: unset;
+        }
+    }
+}
+.new-employee-field {
+    .other-info {
+        margin: 15px 0;
+    }
+}
+.team-members {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    li {
+        ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            li {
+                a {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 2px solid $white;
+                    }
+                }
+                margin-left: -7px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    a {
+                        position: relative;
+                        &::after {
+                            content: "";
+                            background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%);
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            border-radius: 50%;
+                            border: 2px solid $white;
+                        }
+                        span {
+                            color: $white;
+                            position: absolute;
+                            left: 5px;
+                            z-index: 1;
+                            top: 3px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+div.dataTables_wrapper div.dataTables_length select {
+    display: none;
+}
+.input-blocks {
+    .form-icon {
+        position: relative;
+        input {
+            padding-left: 30px;
+        }
+        .cus-icon {
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            svg {
+                width: 14px;
+                color: $text-color;
+            }
+        }
+    }
+    &.custom-form-check {
+        margin: 15px 0;
+    }
+}
+.modal {
+    .input-blocks {
+        margin-bottom: 15px;
+    }
+}
+.checkboxs.modal-table-check {
+    line-height: normal;
+    margin-right: 13px;
+    margin-bottom: 0;
+    padding-left: 25px;
+    display: inline-block;
+    .checkmarks{
+        top: 3px;
+    }
+    input ~ .checkmarks {
+        border-radius: 5px;
+    }
+    input:checked ~ .checkmarks {
+        border-color: $primary;
+    }
+} 
+.no-pagination {
+    .dataTables_length,.paging_numbers {
+        display: none;
+    }
+}
+.modal-table-tab {
+    .nav-link {
+        background-color: rgba(145, 158, 171, 0.30);
+        color: $text-color;
+        padding: 10px 20px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        &.active {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+}
+.modal-table-item {
+    h4 {
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-16;
+        margin-bottom: 20px;
+        color: $secondary;
+    }
+}
+.break-title {
+    h4 {
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-16;
+        margin-bottom: 10px;
+        color: $secondary;
+    }
+}
+.table-top-new {
+    @include respond-below(custom1199) {
+        .search-set .search-input input[type=search] {
+            width: 140px;
+        }
+        .total-employees {
+            margin-right: 10px;
+        }
+        .search-path .btn-filter,.search-path .btn-filter {
+            margin-right: 10px;
+        }
+    }
+    @include respond-below(custom991) {
+        .search-set .search-input input[type=search] {
+            width: 200px;
+        }
+    }
+}

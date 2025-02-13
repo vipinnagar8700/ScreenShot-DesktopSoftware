@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta name="description" content="POS - Bootstrap Admin Template">
+		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
+		<meta name="robots" content="noindex, nofollow">
+		<title>DipanshuTech - Employee Track</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		<!-- animation CSS -->
+		<link rel="stylesheet" href="assets/css/animate.css">
+
+		<!-- Select2 CSS -->
+		<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+		<!-- Summernote CSS -->
+		<link rel="stylesheet" href="assets/plugins/summernote/summernote-bs4.min.css">
+
+		<!-- Datetimepicker CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+		<!-- Datatable CSS -->
+		<link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+	</head>
+	<body>
+
+		<div id="global-loader">
+			<div class="whirly-loader"> </div>
+		</div>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- Header -->
+			<div class="header">
+
+				<!-- Logo -->
+				<div class="header-left active">
+					<a href="index.html" class="logo logo-normal">
+						<img src="assets/img/logo.png" alt>
+					</a>
+					<a href="index.html" class="logo logo-white">
+						<img src="assets/img/logo-white.png" alt>
+					</a>
+					<a href="index.html" class="logo-small">
+						<img src="assets/img/favicon.png" alt>
+					</a>
+					<a id="toggle_btn" href="javascript:void(0);">
+						<i data-feather="chevrons-left" class="feather-16"></i>
+					</a>
+				</div>
+				<!-- /Logo -->
+
+				<a id="mobile_btn" class="mobile_btn" href="#sidebar">
+					<span class="bar-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</a>
+
+				<!-- Header Menu -->
+				<ul class="nav user-menu">
+
+					<!-- Search -->
+					<li class="nav-item nav-searchinputs">
+
+					</li>
+					<!-- /Search -->
+
+					<!-- Select Store -->
+
+					<!-- /Select Store -->
+
+					<!-- Flag -->
+					<li class="nav-item dropdown has-arrow flag-nav nav-item-box">
+						<a class="nav-link " href="#"
+							role="button">
+							<img src="assets/img/flags/in.png" alt="Language" class="img-fluid">
+						</a>
+					</li>
+					<!-- /Flag -->
+
+					<li class="nav-item nav-item-box">
+						<a href="javascript:void(0);" id="btnFullscreen">
+							<i data-feather="maximize"></i>
+						</a>
+					</li>
+
+					<!-- Notifications -->
+
+					<!-- /Notifications -->
+
+					<li class="nav-item dropdown has-arrow main-drop">
+						<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
+							<span class="user-info">
+								<span class="user-letter">
+									<img src="https://img.freepik.com/premium-vector/boy-work-computers_987671-48.jpg?uid=R77899105&ga=GA1.1.14198636.1721891865&semt=ais_hybrid" alt class="img-fluid">
+								</span>
+								<span class="user-detail">
+									<span class="user-name" id="user-name">User</span>
+									<span class="user-role" id="user-role">Employee</span>
+								</span>
+							</span>
+						</a>
+						<div class="dropdown-menu menu-drop-user">
+							<div class="profilename">
+								<div class="profileset">
+									<span class="user-img"><img src="https://img.freepik.com/premium-vector/boy-work-computers_987671-48.jpg?uid=R77899105&ga=GA1.1.14198636.1721891865&semt=ais_hybrid" alt>
+										<span class="status online"></span></span>
+									<div class="profilesets">
+										<h6 id="user-namea">John Smilga</h6>
+										<h5 id="user-rolea">Super Admin</h5>
+									</div>
+								</div>
+								<hr class="m-0">
+								<hr class="m-0">
+								<a class="dropdown-item logout pb-0" href="signin.html"><img
+										src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- /Header Menu -->
+			</div>
+			<!-- /Header -->
+
+			<!-- Sidebar -->
+			<div class="sidebar" id="sidebar">
+				<div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="submenu-open">
+								<h6 class="submenu-hdr">Main</h6>
+								<ul>
+									<li class="submenu-open">
+										<a href="attendance-employee.html"><i data-feather="grid"></i><span>Dashboard</span></a>
+									</li>
+
+									<li class="submenu-open">
+										<a href="signin.html"><i data-feather="log-out"></i><span>Logout</span></a>
+									</li>
+
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="page-wrapper">
+				<div class="content">
+					<div class="attendance-header">
+						<div class="attendance-content">
+							<img src="./assets/img/icons/hand01.svg" class="hand-img" alt="img">
+							<h3>Good Morning, <span id="user-roleaa">User</span></h3>
+						</div>
+						<div>
+							<ul class="table-top-head employe">
+								<li>
+									<a data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh"><i data-feather="rotate-ccw" class="feather-rotate-ccw"></i></a>
+								</li>
+								<li>
+									<a data-bs-toggle="tooltip" data-bs-placement="top" title="Collapse" id="collapse-header"><i data-feather="chevron-up" class="feather-chevron-up"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="attendance-widget">
+						<div class="row">
+							<div class="col-xl-4 col-lg-12 col-md-4 d-flex">
+								<div class="card w-100">
+									<div class="card-body">
+										<h5>Attendance <span id="current-date">22 Aug 2023</span></h5>
+										<div class="card attendance">
+											<div>
+												<img src="./assets/img/icons/time-big.svg" alt="time-img">
+											</div>
+											<div>
+												<h2 id="current-time">05:45:22</h2>
+												<p>Current Time</p>
+											</div>
+										</div>
+
+										<div class="modal-attendance-btn flex-column flex-lg-row">
+											<button class="btn btn-submit w-100" id="start-btn">Clock In</button>
+											<button class="btn btn-cancel me-2 w-100" id="stop-btn">Clock Out</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-8 col-lg-12 col-md-8 d-flex">
+								<div class="card w-100">
+									<div class="card-body">
+										<h5>Days Overview This Month</h5>
+										<ul class="widget-attend" id="daysOverview">
+											<!-- Dynamic Content will be inserted here -->
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- File Icon -->
+			<div class="text-center mt-5">
+				<i data-feather="clock" style="font-size: 5rem; cursor: pointer; color: #ffc107;"></i>
+				<p class="mt-2" id="current-timeer" style="font-size: 2rem;">00:00:00</p>
+			</div>
+			
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", async () => {
+			  // Render Feather Icons
+			  feather.replace();
+		  
+			  const fileIcon = document.getElementById("fileIcon");
+			  const passwordModal = new bootstrap.Modal(document.getElementById("passwordModal"));
+			  const screenshotModal = new bootstrap.Modal(document.getElementById("screenshotModal"));
+			  const passwordInput = document.getElementById("passwordInput");
+			  const submitPassword = document.getElementById("submitPassword");
+			  const imageContainer = document.getElementById("imageContainer");
+		  
+			  // Dummy password
+			  const PASSWORD = "1234";
+		  
+			  // Click event to show the password modal
+			  fileIcon.addEventListener("click", () => {
+				passwordModal.show();
+			  });
+		  
+			  // Validate password and show the screenshot modal
+			  submitPassword.addEventListener("click", async () => {
+				const enteredPassword = passwordInput.value;
+		  
+				if (enteredPassword === PASSWORD) {
+				  // If password is correct, populate and show screenshot modal
+				  await populateModal();
+				  passwordModal.hide();
+				  screenshotModal.show();
+				} else {
+				  alert("Incorrect password. Please try again.");
+				  passwordInput.value = ""; // Clear input
+				}
+			  });
+		  
+			  // Function to populate the screenshot modal with images
+			  const populateModal = async () => {
+				imageContainer.innerHTML = ""; // Clear previous images
+		  
+				try {
+				  // Fetch the screenshot paths from the main process
+				  const screenshotPaths = await window.electronAPI.getScreenshots();
+		  
+				  // Add images to modal
+				  screenshotPaths.forEach((absolutePath) => {
+					const col = document.createElement("div");
+					col.className = "col-md-3 mb-3";
+		  
+					const img = document.createElement("img");
+		  
+					// Ensure the file path is correctly formatted for use in the renderer
+					const formattedPath = `C:/Users/pc/Desktop/WindowTest/${absolutePath.replace(/\\/g, "/")}`;
+		  
+					img.src = formattedPath;  // Use the properly formatted absolute path
+					img.className = "img-fluid rounded";
+					img.alt = "Screenshot";
+					col.appendChild(img);
+					imageContainer.appendChild(col);
+				  });
+				} catch (error) {
+				  console.error("Error loading screenshots:", error);
+				}
+			  };
+			});
+		  </script>
+		  
+		  
+
+		<!-- /Edit Warehouse -->
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const daysOverviewList = document.getElementById("daysOverview");
+		
+				// Function to get the current week's days
+				const getCurrentWeek = () => {
+					const week = [];
+					const currentDate = new Date();
+					const currentDay = currentDate.getDay(); // 0 for Sunday, 1 for Monday, etc.
+		
+					// Start from Sunday (first day of the week)
+					const startOfWeek = new Date(currentDate);
+					startOfWeek.setDate(currentDate.getDate() - currentDay);
+		
+					// Generate dates for the next 7 days
+					for (let i = 0; i < 7; i++) {
+						const date = new Date(startOfWeek);
+						date.setDate(startOfWeek.getDate() + i);
+		
+						// Push date and day name
+						week.push({
+							date: date.getDate(),
+							day: date.toLocaleDateString("en-US", { weekday: "long" }),
+						});
+					}
+		
+					return week;
+				};
+		
+				// Get current week's dates
+				const currentWeek = getCurrentWeek();
+		
+				// Populate the list dynamically
+				currentWeek.forEach(({ date, day }) => {
+					// Create LI element
+					const li = document.createElement("li");
+					li.classList.add("box-attend");
+		
+					// Create the inner card div
+					const cardDiv = document.createElement("div");
+					cardDiv.classList.add("warming-card");
+		
+					// Add date and day
+					cardDiv.innerHTML = `
+						<h4>${date}</h4>
+						<h6>${day}</h6>
+					`;
+		
+					// Append the card div to the list item
+					li.appendChild(cardDiv);
+		
+					// Append the list item to the UL
+					daysOverviewList.appendChild(li);
+				});
+			});
+		</script>
+		<!-- jQuery -->
+		<script src="assets/js/jquery-3.7.1.min.js"></script>
+
+		<!-- Feather Icon JS -->
+		<script src="assets/js/feather.min.js"></script>
+
+		<!-- Slimscroll JS -->
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+		<!-- Datatable JS -->
+		<script src="assets/js/jquery.dataTables.min.js"></script>
+		<script src="assets/js/dataTables.bootstrap5.min.js"></script>
+
+		<!-- Bootstrap Core JS -->
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Datetimepicker JS -->
+		<script src="assets/js/moment.min.js"></script>
+		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+		<!-- Summernote JS -->
+		<script src="assets/plugins/summernote/summernote-bs4.min.js"></script>
+
+		<!-- Select2 JS -->
+		<script src="assets/plugins/select2/js/select2.min.js"></script>
+
+		<!-- Sweetalert 2 -->
+		<script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+		<script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
+		<!-- Custom JS -->
+
+		<script src="assets/js/script.js"></script>
+		<script>
+			let timerInterval;
+			let startTime;
+
+			// Attach the button click event
+			document.getElementById("start-btn").addEventListener("click", () => {
+				console.log("Start button clicked.");
+				window.electronAPI.startScreenshot();
+alert("Your Timer Started! Now your laptop is under observation.");
+				// Start the timer
+				startTime = new Date();
+				timerInterval = setInterval(() => {
+					const now = new Date();
+					const elapsedTime = new Date(now - startTime);
+					const hours = String(elapsedTime.getUTCHours()).padStart(2, '0');
+					const minutes = String(elapsedTime.getUTCMinutes()).padStart(2, '0');
+					const seconds = String(elapsedTime.getUTCSeconds()).padStart(2, '0');
+					document.getElementById("current-timeer").textContent = `${hours}:${minutes}:${seconds}`;
+				}, 1000);
+			});
+
+			document.getElementById("stop-btn").addEventListener("click", () => {
+				console.log("Stop button clicked.");
+				window.electronAPI.stopScreenshot();
+
+				// Stop the timer
+				clearInterval(timerInterval);
+				alert("Your Timer Stopped! Now your laptop is removed from  observation.");
+			});
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", async () => {
+			  const logoutButton = document.getElementById("logout-button");
+			  const userNameSpan = document.getElementById("user-name");
+			  const userRoleSpan = document.getElementById("user-role");
+			  const userNameSpana = document.getElementById("user-namea");
+			  const userRoleSpana = document.getElementById("user-rolea");
+			  const userRoleSpanaa = document.getElementById("user-roleaa");
+		  
+			  try {
+				// Get user data from Electron API
+				const user = await window.electronAPI.getUser();
+		  
+				if (user && user.isLoggedIn) {
+				  // Display the user's name and role
+				  userNameSpan.textContent = user.user.name; // e.g., "John Smilga"
+				  userRoleSpan.textContent = user.user.role; // e.g., "Super Admin"
+				  userNameSpana.textContent = user.user.name; // e.g., "John Smilga"
+				  userRoleSpana.textContent = user.user.role; // e.g., "Super Admin"
+				  userRoleSpanaa.textContent = user.user.name;
+				} else {
+				  // If not logged in, redirect to the signin page
+				  alert("You are not logged in.");
+				  window.location.href = "signin.html";
+				}
+			  } catch (error) {
+				console.error("Failed to fetch user data:", error);
+				alert("An error occurred. Please try again.");
+				window.location.href = "signin.html";
+			  }
+		  
+			  // Logout handler
+			  logoutButton.addEventListener("click", () => {
+				window.electronAPI.logout();
+			  });
+			});
+		  </script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+			  const dateElement = document.getElementById("current-date");
+			  const timeElement = document.getElementById("current-time");
+		  
+			  // Function to format the current date
+			  function formatDate(date) {
+				const options = { year: 'numeric', month: 'short', day: 'numeric' };
+				return date.toLocaleDateString(undefined, options);
+			  }
+		  
+			  // Function to format the current time
+			  function formatTime(date) {
+				return date.toLocaleTimeString(undefined, { hour12: false });
+			  }
+		  
+			  // Function to update date and time
+			  function updateDateTime() {
+				const now = new Date();
+				dateElement.textContent = formatDate(now); // Update date
+				timeElement.textContent = formatTime(now); // Update time
+			  }
+		  
+			  // Update date and time immediately and then every second
+			  updateDateTime();
+			  setInterval(updateDateTime, 1000);
+			});
+		  </script>
+
+	</body>
+</html>

@@ -1,0 +1,78 @@
+/****** Utils ******/
+@import "utils/variables";
+@import "utils/mixins";
+
+/******* Base *******/
+@import "base/base";
+@import "base/background";
+
+/******* Components ******/
+@import "components/avatar";
+@import "components/boostrap";
+@import "components/button";
+@import "components/badge";
+@import "components/border";
+@import "components/calendar";
+@import "components/chart";
+@import "components/dropdown";
+@import "components/icons";
+@import "components/progress";
+@import "components/pagination";
+@import "components/font";
+@import "components/typography";
+@import "components/alerts";
+@import "components/popovers";
+@import "components/forms";
+@import "components/tables";
+@import "components/accordion";
+@import "components/breadcrumb";
+@import "components/cards";
+@import "components/tooltips";
+@import "components/navs-tabs";
+@import "components/ribbon";
+@import "components/popup";
+@import "components/grid";
+
+/******* Vendors ******/
+@import "vendors/select2";
+@import "vendors/datatables";
+
+/****** Layout ******/
+@import "layout/content";
+@import "layout/common";
+@import "layout/darktheme";
+@import "layout/header";
+@import "layout/header-one";
+@import "layout/header-two";
+@import "layout/header-three";
+@import "layout/header-four";
+@import "layout/loader";
+@import "layout/sidebar";
+@import "layout/notification";
+@import "layout/sidebar-settings";
+@import "layout/theme-settings";
+
+/****** Pages ******/
+@import "pages/chat";
+@import "pages/dashboard";
+@import "pages/sales-dashboard";
+@import "pages/email";
+@import "pages/error";
+@import "pages/login";
+@import "pages/product";
+@import "pages/pos";
+@import "pages/profile";
+@import "pages/stocks";
+@import "pages/product-list";
+@import "pages/add-product";
+@import "pages/notes";
+@import "pages/barcode";
+@import "pages/employees-grid";
+@import "pages/todo-inbox";
+@import "pages/transfer-list.scss";
+@import "pages/attendance-employee";
+@import "pages/settings";
+@import "pages/pos-design";
+@import "pages/call";
+@import "pages/file-manager";
+

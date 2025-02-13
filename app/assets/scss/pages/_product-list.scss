@@ -1,0 +1,64 @@
+.user{
+    &.product-list{
+        align-items: center;
+        .emping{
+            &.d-flex{
+            align-items: center; 
+        a {
+        img{
+            border-radius: 6px;
+            margin-right: 8px;
+        }
+    }
+    }
+    }
+    }
+}
+.war-add #phone {
+    height: 38px;
+}
+.war-edit-phone #phone2, .war-edit-phone #phone3 {
+    height: 38px;
+}
+.user.product-list a img{
+    border-radius: 6px;
+    margin-right: 8px;
+}
+.user.user.product-list .emping a{
+    align-items: center;
+}
+.modal.show .modal-dialog.purchase{
+  max-width: 1140px;
+}
+.page-header .btn-added.color{
+    background-color: $secondary;
+    &:hover{
+        background-color: $primary;
+        color: $white;
+    }
+}
+.input-blocks.download{
+    float: right;
+}
+.feather-plus-circles{
+    color: $white;
+}
+.add-icon.plus a{
+    color:$secondary ;
+}
+.import-btn{
+    float: right;
+    margin-bottom: 20px;
+}
+.image-upload.download input[type=file] {
+    height: 150px;
+}
+.image-upload.download{
+    border-radius: 5px;
+border: 1px dashed var(--Subtitle, #B8BCC9);
+margin-bottom: 0;
+}
+.modal-footer-btn.download-file{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
